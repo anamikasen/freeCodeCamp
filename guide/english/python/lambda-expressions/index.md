@@ -3,7 +3,7 @@ title: Lambda Expressions
 ---
 ## Lambda Expressions
 
-Lambda Expressions are ideally used when we have something simple to be done an we are more interested in quickly getting the job done rather than formally naming the function. Lambda expressions also known as anonymous functions.
+Lambda Expressions are ideally used when we have something simple to be done an we are more interested in quickly getting the job done rather than formally naming the function. Lambda expressions also known as anonymous functions and throwaway functions.
 <a href='https://github.com/freecodecamp/guides/tree/master/src/pages/python/lambda-expressions/index.md' target='_blank' rel='nofollow'>Help our community expand it</a>.
 
 Lambda Expressions in Python are a short way to declare small and anonymous functions (it is not necessary to provide a name for lambda functions). Lambda functions behave just like regular functions declared with the `def` keyword. They come in handy when you want to define a small function in a concise way. They can contain only one expression, so they are not best suited for functions with control-flow statements.
@@ -12,7 +12,7 @@ master
 #### Syntax of Lambda Function
 `lambda arguments: expression`
 
-Lambda functions can have any number of arguments but only one expression
+Lambda functions can have any number of arguments but only one expression. Lambda functions are used in combination with filter(), map() and reduce().
 
 #### Example code
 ```py
@@ -82,6 +82,12 @@ list(filtered)
 NOTE: in Python 3 built in function return generator objects, so you have to call `list`, while in Python 2 they return a `list`, `tuple`or `string`.
 
 What happened? You told `filter` to take each element in `my_list` and apply the lambda expressions. The values that return `False` are filtered out. 
+
+### map
+```py
+lambda_func = lambda x: x**2 # Function that takes an integer and returns its square
+lambda_func(3) # Returns 9
+```
 
 #### More Information:
 - [Official Doc](https://docs.python.org/3/reference/expressions.html#lambda)
